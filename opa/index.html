@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você está convidado</title>
+
+    <style>
+        body{
+            background-color: black;
+            background-size: cover;
+        }
+
+        .painel{
+            margin: auto;
+            background-color: orangered;
+            width: 1000px;
+            height: 400px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sim{
+            height: 50px;
+            width: 100px;
+            background-color: black;
+            border: 2px solid orange;
+            border-radius: 10px;
+            color: orange;
+            margin-left: -118px;
+        }
+        #nao{
+            position: absolute;
+            height: 50px;
+            width: 100px;
+            background-color: black;
+            border: 2px solid orange;
+            border-radius: 10px;
+            color: orange;
+            margin-left: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+        <h1> Oi dengo vamo comê sushizin amanhã?</h1>
+
+        <img src="https://www.folhabv.com.br/wp-content/plugins/seox-image-magick/imagick_convert.php?width=2000&height=1333&format=.jpg&quality=91&imagick=uploads.folhabv.com.br/2023/09/1aaa.jpg" alt="" 
+        width="250">
+
+        <h2>BORA? </h2>
+       
+        
+
+        <a href="file:///C:/Users/User/Downloads/Voucher%20vale%20dengo%20(1).jpg"><button id="sim" > Sim! </button></a>
+        <button onmouseover="fuja()" id="nao"> Não! </button>
+        
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+    </script>
+
+
+
+    
+</body>
+</html>
